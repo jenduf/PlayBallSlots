@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="DLV-F9-86t">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Slot View Controller-->
+        <scene sceneID="eCK-FY-epE">
+            <objects>
+                <viewController storyboardIdentifier="SlotViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DLV-F9-86t" customClass="SlotViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYi-1g-Pus">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zut-3l-EfA">
+                                <connections>
+                                    <outlet property="dataSource" destination="DLV-F9-86t" id="Cji-2F-hi1"/>
+                                    <outlet property="delegate" destination="DLV-F9-86t" id="3cs-LW-mVr"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRW-Gh-s7y">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="CNU-if-ZdX"/>
+                                    <constraint firstAttribute="width" constant="341" id="WOj-7Y-41N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="start_button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="spin:" destination="DLV-F9-86t" eventType="touchUpInside" id="zXn-w1-J3C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xRW-Gh-s7y" secondAttribute="trailing" constant="52" id="4cD-og-WMP"/>
+                            <constraint firstItem="Zut-3l-EfA" firstAttribute="centerY" secondItem="FYi-1g-Pus" secondAttribute="centerY" type="default" id="LYv-iQ-a61"/>
+                            <constraint firstAttribute="bottom" secondItem="xRW-Gh-s7y" secondAttribute="bottom" constant="75" id="P7Z-hp-Xbr"/>
+                            <constraint firstItem="Zut-3l-EfA" firstAttribute="trailing" secondItem="FYi-1g-Pus" secondAttribute="trailing" type="default" id="ThK-LF-3Pn"/>
+                            <constraint firstItem="Zut-3l-EfA" firstAttribute="leading" secondItem="FYi-1g-Pus" secondAttribute="leading" type="default" id="qvo-Wj-hBS"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="slotPickerView" destination="Zut-3l-EfA" id="MGZ-VV-fuM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKJ-OV-lkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="-114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="start_button.png" width="341" height="144"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
